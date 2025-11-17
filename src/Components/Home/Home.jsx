@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="mt-20 mb-4 flex justify-around items-center h-screen
+      className="mt-20 mb-4 flex justify-around items-center h-screen 
     "
     >
       <div>
@@ -42,8 +42,10 @@ const Home = () => {
         <div className="flex items-center  gap-5 mt-3">
           <div>
             <a
-              href="https://docs.google.com/document/d/1pzrhivXLBxO02XX-3bNbrnkgl4XxqGQ4/export?format=pdf
-"
+              href="/deepta dutta finalCV (Autosaved).docx-2.pdf"
+               download
+               target="blank"
+                rel="noopener noreferrer"
             >
               <button className=" flex gap-2 items-center cursor-pointer btn-outline border border-[#47d267] font-semibold text-[#47d267] hover:bg-[#47d267] hover:text-black px-5 py-2 mt-3 rounded-2xl">
                 Download Resume <FaArrowAltCircleDown />
