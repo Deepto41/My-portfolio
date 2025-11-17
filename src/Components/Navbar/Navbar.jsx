@@ -68,15 +68,16 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
-      <div className="navbar-end">
-  <AnchorLink href="#contacts">
-    <button
-      className="btn hidden hover:text-black border-[#47d267] lg:block hover:bg-[#47d267] rounded-2xl transition-transform duration-500 ease-in-out transform hover:scale-110 text-[#47d267]"
-    >
-      Connect With Me
-    </button>
-  </AnchorLink>
-
+        <div className="navbar-end">
+          <a
+            href="https://drive.google.com/file/d/1QLPbpdigMPf33l8_HBScMEsWrUBMmnYQ/preview"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <button className="btn hidden hover:text-black border-[#47d267] lg:block hover:bg-[#47d267] rounded-2xl px-5  transition-transform duration-500 ease-in-out transform hover:scale-110 text-[#47d267] text-lg mr-3">
+              Resume
+            </button>
+          </a>
 
           {/* Hamburger Button (Mobile) */}
           <button
