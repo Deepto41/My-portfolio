@@ -1,0 +1,25 @@
+.navbar ul li a  {
+ 
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Hover effect */
+.navbar ul li a:hover {
+  color: #47d267;
+  text-decoration: none;
+  background-color: transparent;
+  transform: scale(1.15); 
+   
+}
+
+/* Active link effect */
+.navbar ul li.active a {
+ color:#47d267; 
+  font-weight: 600;
+   
+}
+
+/* .navbar li a.active{
+   
+     color: #47d267; 
+} */
