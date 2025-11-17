@@ -70,7 +70,7 @@ const Navbar = () => {
 
         <div className="navbar-end">
           <a
-            href="https://drive.google.com/file/d/1QLPbpdigMPf33l8_HBScMEsWrUBMmnYQ/preview"
+            href="https://drive.google.com/file/d/1QLPbpdigMPf33l8_HBScMEsWrUBMmnYQ/view"
             target="blank"
             rel="noopener noreferrer"
           >

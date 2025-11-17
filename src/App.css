@@ -1,8 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+}
+
 /* google font  */
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
 
 .geist-mono-font {
   font-family: "Geist Mono", monospace;
