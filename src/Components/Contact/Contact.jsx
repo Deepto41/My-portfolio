@@ -8,30 +8,43 @@ import Swal from "sweetalert2";
 const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
+
     const formData = new FormData(event.target);
+    // Add your Web3Forms access key here
     formData.append("access_key", "8c4f8c03-6f61-4a96-8673-f3350524b6bc");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
-   if (data.success) {
-  Swal.fire({
-    title: "Message sent successfully!",
-    icon: "success",
-    draggable: true,
-  });
-  event.target.reset();
-} else {
-  Swal.fire({
-    title: "Failed to send message!",
-    text: "Please try again later.",
-    icon: "error",
-    draggable: true,
-  });
-}
+      const data = await response.json();
+
+      if (data.success) {
+        Swal.fire({
+          title: "Message sent successfully!",
+          icon: "success",
+          draggable: true,
+        });
+        event.target.reset();
+      } else {
+        Swal.fire({
+          title: "Failed to send message!",
+          text: data.message || "Please try again later.",
+          icon: "error",
+          draggable: true,
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        title: "Failed to send message!",
+        text: "Something went wrong. Please try again later.",
+        icon: "error",
+        draggable: true,
+      });
+      console.error(error);
+    }
   };
 
   return (
@@ -61,7 +74,9 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Left section */}
         <div className="border rounded-2xl p-8 flex-1  text-white">
-          <h2 className="text-4xl font-bold mb-8 mt-3"><span className="text-[#47d267]">Let's </span>Talk</h2>
+          <h2 className="text-4xl font-bold mb-8 mt-3">
+            <span className="text-[#47d267]">Let's </span>Talk
+          </h2>
           <p className="mb-10 ">
             I am available for freelance projects, professional collaborations,
             or any inquiries related to frontend development. Please feel free
@@ -89,23 +104,27 @@ const Contact = () => {
           <form onSubmit={onSubmit} className="flex flex-col gap-4">
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
               required
-              className="px-4 py-3 rounded-lg border border-gray-700  text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 outline-none transition-all duration-300 w-full"
+              className="px-4 py-3 rounded-lg border border-gray-700 text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 outline-none transition-all duration-300 w-full"
             />
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
               required
               className="px-4 py-3 rounded-lg border border-gray-700 bg-transparent text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 outline-none transition-all duration-300 w-full"
             />
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
               required
               className="px-4 py-3 rounded-lg border border-gray-700 bg-transparent text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 outline-none transition-all duration-300 w-full"
             />
             <textarea
+              name="message"
               placeholder="Message"
               rows="5"
               required

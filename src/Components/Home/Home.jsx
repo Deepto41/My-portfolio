@@ -41,9 +41,14 @@ const Home = () => {
 
         <div className="flex items-center  gap-5 mt-3">
           <div>
-            <button className=" flex gap-2 items-center cursor-pointer btn-outline border border-[#47d267] font-semibold text-[#47d267] hover:bg-[#47d267] hover:text-black px-5 py-2 mt-3 rounded-2xl">
-              Download Resume <FaArrowAltCircleDown />
-            </button>
+            <a
+              href="https://docs.google.com/document/d/1pzrhivXLBxO02XX-3bNbrnkgl4XxqGQ4/export?format=pdf
+"
+            >
+              <button className=" flex gap-2 items-center cursor-pointer btn-outline border border-[#47d267] font-semibold text-[#47d267] hover:bg-[#47d267] hover:text-black px-5 py-2 mt-3 rounded-2xl">
+                Download Resume <FaArrowAltCircleDown />
+              </button>
+            </a>
           </div>
 
           <div className="flex gap-4 items-center mt-3 ml-2">
