@@ -12,8 +12,8 @@ const Home = () => {
       className="
         mt-8 mb-4 
         flex flex-col lg:flex-row         /* mobile column, desktop row */
-        justify-around items-center 
-        h-auto lg:h-screen               /* mobile auto height */
+        justify-between items-center 
+        h-auto lg:h-screen w-11/12 mx-auto              /* mobile auto height */
         px-4
       "
     >

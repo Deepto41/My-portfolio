@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="mt-20 px-4 md:px-8 lg:px-20 mx-auto max-w-7xl">
+    <section id="about" className="mt-20 px-4 md:px-8 lg:px-20  w-11/12 mx-auto">
       {/* Heading */}
       <div className="flex flex-col items-center text-center">
         <button className="mb-6 rounded-3xl border px-6 py-2 w-fit flex items-center gap-2 text-lg font-medium text-[#47d267] hover:text-black hover:bg-[#47d267] transition-colors duration-300">
@@ -21,7 +21,7 @@ const About = () => {
           ABOUT
         </button>
 
-        <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
           About <span className="text-[#47d267]">Me</span>
         </h2>
       </div>

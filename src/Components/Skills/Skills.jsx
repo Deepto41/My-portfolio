@@ -23,7 +23,7 @@ import logo16 from '../../assets/skills/express-js-seeklogo.png'
 
 const Skills = () => {
   return (
-    <div id="skills" className="mt-40 mx-auto w-11/12 mb-10">
+    <div id="skills" className="mt-40 mx-auto w-11/12  mb-10">
       <div className="flex flex-col items-center mb-6">
         <button className="mb-6 -mr-3 rounded-3xl border px-6 py-2 w-fit flex items-center gap-2 hover:text-black hover:bg-[#47d267] text-lg">
           <motion.div

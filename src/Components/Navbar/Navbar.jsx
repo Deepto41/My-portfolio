@@ -93,7 +93,7 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR */}
-      <div className="navbar px-4 backdrop-blur-sm shadow-sm top-0 z-30 w-full sticky bg-base-100">
+      <div className="navbar px-4 backdrop-blur-sm shadow-sm top-0 z-30 w-11/12 mx-auto sticky bg-base-100">
         <div className="navbar-start">
           <a href="#home" className="btn text-xl p-0">
             <img className="w-36" src={logo} alt="Logo" />
@@ -118,48 +118,51 @@ const Navbar = () => {
           {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setOpen(!open)}
-            className="btn btn-ghost lg:hidden ml-2"
+            className="btn btn-ghost lg:hidden ml-2 text-2xl"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            {open ? "✕" : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
           </button>
         </div>
       </div>
 
-      {/* MOBILE SIDEBAR */}
+      {/* MOBILE SIDEBAR (under navbar, auto height) */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-base-100 shadow-lg transform transition-transform duration-300 z-50 border-l rounded-l-2xl overflow-y-auto ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`
+          absolute right-0 
+          mt-2                     /* under navbar */
+          w-64 
+          bg-base-100 
+          shadow-lg 
+          transform transition-transform duration-300 
+          z-20 
+          border rounded-l-2xl 
+          overflow-hidden 
+          ${open ? "translate-x-0" : "translate-x-full"}
+        `}
       >
-        <div className="flex justify-end p-4">
-          <button
-            onClick={() => setOpen(false)}
-            className="btn btn-sm btn-circle btn-ghost"
-          >
-            ✕
-          </button>
-        </div>
         <ul className="menu p-4 space-y-2">{links(true)}</ul>
       </div>
 
-      {/* OVERLAY */}
+      {/* OVERLAY (dim background under navbar) */}
       {open && (
         <div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 mr-20 bg-opacity-20 z-40"
+          className="fixed top-[70px] left-0 right-0 bottom-0  bg-opacity-20 z-10"
         ></div>
       )}
     </>
