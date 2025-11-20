@@ -10,7 +10,6 @@ const Contact = () => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    // Add your Web3Forms access key here
     formData.append("access_key", "8c4f8c03-6f61-4a96-8673-f3350524b6bc");
 
     try {
@@ -73,34 +72,39 @@ const Contact = () => {
       {/* contact section */}
       <div className="flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Left section */}
-        <div className="border rounded-2xl p-8 flex-1  text-white">
+        <div className="border rounded-2xl p-8 flex-1 text-white">
           <h2 className="text-4xl font-bold mb-8 mt-3">
             <span className="text-[#47d267]">Let's </span>Talk
           </h2>
-          <p className="mb-10 ">
+          <p className="mb-10 text-center lg:text-left">
             I am available for freelance projects, professional collaborations,
             or any inquiries related to frontend development. Please feel free
             to get in touch to discuss opportunities or potential partnerships.
           </p>
-          <p className="flex gap-3 mt-3 items-center">
-            <IoMdPerson className="text-[#47d267]" size={25} />
-            Deepta Dutta
-          </p>
-          <p className="flex gap-3 mt-3 items-center">
-            <IoMdMail className="text-[#47d267]" size={25} />
-            deeptaduttaksp@gmail.com
-          </p>
-          <p className="flex gap-3 mt-3 items-center">
-            <FaPhoneAlt className="ml-1 text-[#47d267]" size={20} />
-            +8801989316366
-          </p>
-          <p className="flex mt-3 items-center gap-3">
-            <FaLocationDot className="text-[#47d267]" size={24} /> Khulna, Bangladesh
-          </p>
+
+          {/* Contact Info */}
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-3">
+              <IoMdPerson className="text-[#47d267] flex shrink-0" size={25} />
+              <span className="truncate">Deepta Dutta</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <IoMdMail className="text-[#47d267] flex shrink-0" size={25} />
+              <span className="truncate">deeptaduttaksp@gmail.com</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaPhoneAlt className="text-[#47d267] flex shrink-0" size={20} />
+              <span className="truncate">+8801989316366</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaLocationDot className="text-[#47d267] flex shrink-0" size={24} />
+              <span className="truncate">Khulna, Bangladesh</span>
+            </div>
+          </div>
         </div>
 
         {/* Right section */}
-        <div className="border rounded-2xl flex-1  p-6 shadow-lg">
+        <div className="border rounded-2xl flex-1 p-6 shadow-lg">
           <form onSubmit={onSubmit} className="flex flex-col gap-4">
             <input
               type="text"
