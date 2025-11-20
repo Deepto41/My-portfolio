@@ -52,7 +52,7 @@ const Home = () => {
         </p>
 
         {/* Text readable on mobile but SAME on desktop */}
-        <p className="font-normal text-base sm:text-lg lg:text-lg leading-relaxed text-wrap">
+        <p className="font-normal text-base sm:text-lg lg:text-lg leading-relaxed ">
           Full Stack Web Developer specializing in JavaScript, React.js,
           <br className="hidden lg:block" />
           Next.js, Redux, Node.js, and Express.js. Proficient in creating
