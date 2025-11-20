@@ -14,39 +14,75 @@ import logo from "../../assets/logo.png";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const links = (
+  const links = (isMobile = false) => (
     <>
-      <li className="mr-3">
-        <AnchorLink href="#home" className="flex items-center gap-2 ">
+      <li>
+        <AnchorLink
+          href="#home"
+          offset="80"
+          onClick={() => isMobile && setOpen(false)}
+          className="flex items-center gap-2"
+        >
           <FaHome size={20} />
-          <span>Home</span>
+          Home
         </AnchorLink>
       </li>
-      <li className="mr-3">
-        <AnchorLink href="#about" className="flex items-center gap-2">
-          <IoPerson size={20} /> About
+
+      <li>
+        <AnchorLink
+          href="#about"
+          offset="80"
+          onClick={() => isMobile && setOpen(false)}
+          className="flex items-center gap-2"
+        >
+          <IoPerson size={20} />
+          About
         </AnchorLink>
       </li>
-      <li className="mr-3">
-        <AnchorLink href="#skills">
+
+      <li>
+        <AnchorLink
+          href="#skills"
+          offset="80"
+          onClick={() => isMobile && setOpen(false)}
+          className="flex items-center gap-2"
+        >
           <FaPen size={20} />
           Skills
         </AnchorLink>
       </li>
-      <li className="mr-3">
-        <AnchorLink href="#education">
+
+      <li>
+        <AnchorLink
+          href="#education"
+          offset="80"
+          onClick={() => isMobile && setOpen(false)}
+          className="flex items-center gap-2"
+        >
           <FaUserGraduate size={20} />
           Education
         </AnchorLink>
       </li>
-      <li className="mr-3">
-        <AnchorLink href="#projects">
+
+      <li>
+        <AnchorLink
+          href="#projects"
+          offset="80"
+          onClick={() => isMobile && setOpen(false)}
+          className="flex items-center gap-2"
+        >
           <FaProjectDiagram size={20} />
           Projects
         </AnchorLink>
       </li>
+
       <li>
-        <AnchorLink href="#contacts">
+        <AnchorLink
+          href="#contacts"
+          offset="80"
+          onClick={() => isMobile && setOpen(false)}
+          className="flex items-center gap-2"
+        >
           <MdMail size={20} />
           Contacts
         </AnchorLink>
@@ -56,30 +92,30 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
-      <div className="navbar  backdrop-blur-sm  shadow-sm  top-0 z-30 w-full sticky">
+      {/* NAVBAR */}
+      <div className="navbar px-4 backdrop-blur-sm shadow-sm top-0 z-30 w-full sticky bg-base-100">
         <div className="navbar-start">
-          <a href="home" className="btn  text-xl ">
-            <img className="w-50" src={logo} alt="" />
+          <a href="#home" className="btn text-xl p-0">
+            <img className="w-36" src={logo} alt="Logo" />
           </a>
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal px-1">{links()}</ul>
         </div>
 
         <div className="navbar-end">
           <a
-            href="https://drive.google.com/file/d/1QLPbpdigMPf33l8_HBScMEsWrUBMmnYQ/view"
-            target="blank"
+            href="https://drive.google.com/file/d/1QLPbpdigMPf33l8_HBScMEsWrUBMmnYQ/preview"
+            target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="btn hidden hover:text-black border-[#47d267] lg:block hover:bg-[#47d267] rounded-2xl px-5  transition-transform duration-500 ease-in-out transform hover:scale-110 text-[#47d267] text-lg mr-3">
+            <button className="btn hidden lg:block border-[#47d267] text-[#47d267] text-lg mr-3 px-5 rounded-2xl hover:bg-[#47d267] hover:text-black transition-transform duration-500 transform hover:scale-110">
               Resume
             </button>
           </a>
 
-          {/* Hamburger Button (Mobile) */}
+          {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setOpen(!open)}
             className="btn btn-ghost lg:hidden ml-2"
@@ -102,9 +138,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Slide-out Sidebar (Right Side) */}
+      {/* MOBILE SIDEBAR */}
       <div
-        className={`fixed top-0 right-0 mb-6 h-full w-64 bg-base-100 shadow-lg transform transition-transform duration-400 z-45 - border-2 rounded-2xl ${
+        className={`fixed top-0 right-0 h-full w-64 bg-base-100 shadow-lg transform transition-transform duration-300 z-50 border-l rounded-l-2xl overflow-y-auto ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -116,14 +152,14 @@ const Navbar = () => {
             ✕
           </button>
         </div>
-        <ul className="menu p-4 ">{links}</ul>
+        <ul className="menu p-4 space-y-2">{links(true)}</ul>
       </div>
 
-      {/* Background Overlay */}
+      {/* OVERLAY */}
       {open && (
         <div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 bg-transprant bg-opacity-20 z-50"
+          className="fixed inset-0 mr-20 bg-opacity-20 z-40"
         ></div>
       )}
     </>

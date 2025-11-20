@@ -2,8 +2,10 @@
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
-  name: "dark";
-  default: true;
+ mytheme: {
+          primary: "#0B0942",       
+        
+        },
 }
 
 /* google font  */

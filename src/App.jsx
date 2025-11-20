@@ -11,7 +11,7 @@ import Footer from './Components/Footer/Footer';
 
 const App = () => {
   return (
-    <div className='mx-auto'>
+    <div className=''>
     <Navbar />
     <Home />
     <About />
