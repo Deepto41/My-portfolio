@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <div id="contacts" className="mt-40 mx-auto w-11/12 mb-20">
       <div className="flex flex-col items-center mb-6">
-        <button className="mb-6 -mr-3 rounded-3xl border px-6 py-2 w-fit flex items-center gap-2 hover:text-black hover:bg-[#47d267] text-lg">
+        <button data-aos="fade-down"    data-aos-duration="2000" className="mb-6 -mr-3 rounded-3xl border px-6 py-2 w-fit flex items-center gap-2 hover:text-black hover:bg-[#47d267] text-lg">
           <motion.div
             animate={{ y: [0, -5, 0] }}
             transition={{
@@ -63,7 +63,9 @@ const Contact = () => {
           Contact
         </button>
 
-        <h2 className="font-bold text-5xl text-center mb-8">
+        <h2
+          className="font-bold text-5xl text-center mb-8"
+        >
           <span className="text-[#47d267]"> Get</span> In{" "}
           <span className="text-[#47d267]">Touch</span>
         </h2>
@@ -72,7 +74,11 @@ const Contact = () => {
       {/* contact section */}
       <div className="flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Left section */}
-        <div className="border rounded-2xl p-8 flex-1 text-white">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="border rounded-2xl p-8 flex-1 text-white"
+        >
           <h2 className="text-4xl font-bold mb-8 mt-3">
             <span className="text-[#47d267]">Let's </span>Talk
           </h2>
@@ -97,14 +103,21 @@ const Contact = () => {
               <span className="truncate">+8801989316366</span>
             </div>
             <div className="flex items-center gap-3">
-              <FaLocationDot className="text-[#47d267] flex shrink-0" size={24} />
+              <FaLocationDot
+                className="text-[#47d267] flex shrink-0"
+                size={24}
+              />
               <span className="truncate">Khulna, Bangladesh</span>
             </div>
           </div>
         </div>
 
         {/* Right section */}
-        <div className="border rounded-2xl flex-1 p-6 shadow-lg">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="border rounded-2xl flex-1 p-6 shadow-lg"
+        >
           <form onSubmit={onSubmit} className="flex flex-col gap-4">
             <input
               type="text"

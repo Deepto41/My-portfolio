@@ -8,7 +8,8 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   return (
-    <div
+    <div data-aos="zoom-in-down"
+    data-aos-duration="3000" 
       id="home"
       className="
         mt-8 mb-4 
