@@ -93,7 +93,7 @@ const Navbar = () => {
       {/* NAVBAR */}
       <div
         ref={navbarRef}
-        className="navbar px-4 backdrop-blur-sm shadow-sm top-0 z-30 w-full lg:w-11/12 mx-auto sticky bg-base-100"
+        className="navbar px-4 backdrop-blur-sm shadow-sm top-0 z-30 w-full  mx-auto sticky bg-base-700"
       >
         <div className="navbar-start">
           <a href="#home" className="btn text-xl p-0">
@@ -107,7 +107,7 @@ const Navbar = () => {
 
         <div className="navbar-end">
           <a
-            href="https://drive.google.com/file/d/1QLPbpdigMPf33l8_HBScMEsWrUBMmnYQ/preview"
+            href="https://drive.google.com/file/d/1QLPbpdigMPf33l8_HBScMEsWrUBMmnYQ/view"
             target="_blank"
             rel="noopener noreferrer"
           >

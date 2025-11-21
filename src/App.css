@@ -1,12 +1,8 @@
 @import "tailwindcss";
-@plugin "daisyui";
-
-@plugin "daisyui/theme" {
- mytheme: {
-          primary: "#0B0942",       
-        
-        },
+@plugin "daisyui" {
+  themes: night --default;
 }
+
 
 /* google font  */
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");

@@ -5,6 +5,7 @@ import { FaArrowAltCircleDown, FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
+
 const Home = () => {
   return (
     <div
@@ -67,7 +68,7 @@ const Home = () => {
         {/* Buttons + Social */}
         <div className="flex flex-col sm:flex-row items-center gap-5 mt-5">
           <a
-            href="/deepta-dutta-resume.pdf"
+            href='/deepta dutta finalCV (Autosaved).docx-2.pdf'
             download
             target="blank"
             rel="noopener noreferrer"
